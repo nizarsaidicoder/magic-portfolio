@@ -1,4 +1,4 @@
-const baseURL = "demo.magic-portfolio.com";
+const baseURL = "nizarsaidi.com";
 
 const routes = {
   "/": true,
@@ -21,7 +21,7 @@ const style = {
   accent: "orange", // blue | indigo | violet | magenta | pink | red | orange | yellow | moss | green | emerald | aqua | cyan
   solid: "contrast", // color | contrast
   solidStyle: "flat", // flat | plastic
-  border: "playful", // rounded | playful | conservative
+  border: "rounded", // rounded | playful | conservative
   surface: "translucent", // filled | translucent
   transition: "all", // all | micro | macro
 };
@@ -56,9 +56,9 @@ const effects = {
     opacity: 100,
   },
   grid: {
-    display: false,
-    color: "neutral-alpha-weak",
-    opacity: 100,
+    display: true,
+    color: "neutral-alpha-strong",
+    opacity: 60,
   },
 };
 

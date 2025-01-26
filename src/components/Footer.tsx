@@ -12,8 +12,7 @@ export const Footer = () => {
       fillWidth
       padding="8"
       horizontal="center"
-      mobileDirection="column"
-    >
+      mobileDirection="column">
       <Flex
         className={styles.mobile}
         maxWidth="m"
@@ -21,18 +20,18 @@ export const Footer = () => {
         paddingX="16"
         gap="16"
         horizontal="space-between"
-        vertical="center"
-      >
-        <Text variant="body-default-s" onBackground="neutral-strong">
+        vertical="center">
+        <Text
+          variant="body-default-s"
+          onBackground="neutral-strong">
           <Text onBackground="neutral-weak">© {currentYear} /</Text>
           <Text paddingX="4">{person.name}</Text>
           <Text onBackground="neutral-weak">
             {/* Usage of this template requires attribution. Please don't remove the link to Once UI. */}
-            / Build your portfolio with{" "}
+            / Built with{" "}
             <SmartLink
               style={{ marginLeft: "-0.125rem" }}
-              href="https://once-ui.com/templates/magic-portfolio"
-            >
+              href="https://once-ui.com/templates/magic-portfolio">
               Once UI
             </SmartLink>
           </Text>
@@ -49,11 +48,13 @@ export const Footer = () => {
                   size="s"
                   variant="ghost"
                 />
-              ),
+              )
           )}
         </Flex>
       </Flex>
-      <Flex height="80" show="s"></Flex>
+      <Flex
+        height="80"
+        show="s"></Flex>
     </Flex>
   );
 };
