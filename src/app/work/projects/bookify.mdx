@@ -1,0 +1,55 @@
+---
+title: "Bookify: Minimalist Book Management Web App with React & Express"
+publishedAt: "2024-12-01"
+summary: "A clean and responsive book management app built with React, Express, and Prisma. Users can browse, rate, and comment on books, manage favorites, and contribute content. Powered by a web-scraped database and documented via Swagger."
+images:
+  - "/images/projects/bookify/cover.jpg"
+  - "/images/projects/bookify/interface.png"
+link: "https://bookify-client-two.vercel.app/"
+---
+
+## Overview
+
+**Bookify** is a minimalist full-stack web application built with **React**, **Express**, and **Prisma**, offering users a simple yet powerful interface to discover, interact with, and contribute to a growing library of books and authors. It supports user authentication and allows registered users to leave comments, rate books, add favorites, and contribute new books and authors. The frontend is styled using the elegant **shadcn/ui** component library, while the backend connects to a Prisma-managed database populated through custom web scraping. The API is fully documented with **Swagger** for ease of use and future development.
+
+## Key Features
+
+- **Book Browsing** : Explore a curated selection of books and authors with detailed information.
+- **User Authentication** : Sign up, log in, and manage sessions securely using JWT tokens.
+- **Ratings and Comments** : Logged-in users can rate and comment on individual books.
+- **Favorites Management** : Add books to a personal list of favorites for quick access.
+- **Contribute New Entries** : Authenticated users can add new books and authors to the platform.
+- **Minimalist UI** : Built with the shadcn/ui library for a clean and cohesive interface.
+- **Scraped Database** : Backend data originates from a custom web-scraping process targeting an existing online book database.
+- **RESTful API with Swagger** : The backend is documented with Swagger UI for clear API exploration and testing.
+- **Prisma ORM** : Simplifies and streamlines database access with a modern ORM for PostgreSQL.
+
+## Technologies Used
+
+- **React** : For building the frontend UI with component-based architecture.
+- **shadcn/ui** : To achieve consistent, modern, and responsive design elements.
+- **Express.js** : For creating a modular and scalable backend API.
+- **Prisma** : As the ORM for structured database access and migrations.
+- **PostgreSQL** : The primary database, accessed via Prisma.
+- **JWT** : To manage secure user authentication and session handling.
+- **Swagger (OpenAPI)** : For comprehensive API documentation and testing.
+- **Node.js** : The runtime environment powering the backend.
+- **JavaScript** : Used throughout both the client and server sides.
+- **Web Scraping** : Automated scripts were written to extract data from a public book database.
+
+## Challenges and Learnings
+
+Bookify provided several important technical and architectural lessons:
+
+- **Database Modeling with Prisma** : Defining clean, relational models in Prisma helped enforce data consistency and made queries efficient.
+- **Frontend-Backend Integration** : Managing authentication tokens, protected endpoints, and data syncing required careful attention to security and UX.
+- **Web Scraping and Data Cleaning** : The data import process needed robust scripts to handle inconsistencies, duplicates, and missing fields.
+- **API Documentation** : Setting up Swagger not only helped others understand the API quickly but also revealed areas for improvement during development.
+- **Authentication & State** : Implementing JWT logic and maintaining frontend state across sessions sharpened my full-stack handling skills.
+
+## Outcome
+
+Bookify is a complete, user-friendly platform for discovering, rating, and sharing books. It demonstrates a solid full-stack architecture with a polished UI and a flexible, scalable backend. With room to expand into genre filters, user libraries, and recommendations, Bookify stands as a strong foundation for a social reading experience.
+
+> 🔗 [Frontend GitHub Repository](https://github.com/nizarsaidicoder/bookify_client)  
+> 🔗 [Backend GitHub Repository](https://github.com/nizarsaidicoder/bookify_api)
