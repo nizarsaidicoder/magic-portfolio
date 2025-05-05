@@ -1,0 +1,47 @@
+---
+title: "T4: Serious Game on Sustainable Architecture in Extreme Conditions"
+publishedAt: "2024-11-20"
+summary: "A web-based serious game built with Nuxt, developed in 3 days by a team of 4. Players explore architectural decision-making in Antarctica, balancing structural integrity and inhabitant satisfaction."
+images:
+  - "/images/projects/t4/cover.jpg"
+  - "/images/projects/t4/gameplay.png"
+link: "https://t4-beta.vercel.app/"
+---
+
+## Overview
+
+**T4** is a **serious game** created during a 3-day sprint by a team of four students. It immerses players in the role of an architect tasked with designing buildings in **Antarctica**—one of the harshest environments on Earth. Each decision impacts not only the structural integrity of the architecture but also the **satisfaction of the inhabitants**. The game emphasizes environmental awareness and sustainable design principles while offering a level-based progression system that rewards thoughtful planning.
+
+Developed as a web app using **Nuxt.js**, the game focuses on interactive button-based choices that simulate architectural challenges. The aim was to provide an educational yet engaging experience that highlights the importance of good architectural decisions in extreme climates.
+
+## Key Features
+
+- **Decision-Based Gameplay** : Players choose between architectural actions that influence satisfaction, comfort, and sustainability.
+- **Inhabitant Feedback System** : Every decision affects the morale and well-being of the community.
+- **Level Progression** : Multiple levels introduce new environmental constraints and architectural challenges.
+- **Minimalist UI** : A clean, interactive interface makes it easy to focus on choices and their consequences.
+- **Educational Value** : Promotes awareness of architectural ethics, environmental constraints, and user-centered design in hostile climates.
+- **Team-Collaboration Project** : Built in 3 days by a group of 4, highlighting fast prototyping and strong teamwork.
+
+## Technologies Used
+
+- **Nuxt.js** : Framework used to build the frontend, offering a smooth SPA experience with Vue at its core.
+- **Vue.js** : Underlying reactive framework for dynamic interface logic.
+- **JavaScript** : Core language for gameplay logic and state handling.
+- **HTML5 & CSS3** : For layout structure and clean design.
+- **Git & GitHub** : For source control and collaboration during rapid development.
+
+## Challenges and Learnings
+
+This project was an intense learning experience in both **technical execution and team dynamics**:
+
+- **Time Constraint** : Designing and building a full game in 3 days required careful scope management and clear task division.
+- **User Experience** : Designing an interface that clearly communicates consequences and feedback to the player was a core UX challenge.
+- **Satisfaction Mechanics** : Implementing a meaningful way to represent and update inhabitant satisfaction based on architectural choices required creative game design thinking.
+- **Environmental Context** : Balancing realism (cold, resources, comfort) with fun and simplicity taught valuable lessons in gamification and abstraction.
+
+## Outcome
+
+T4 successfully demonstrates how games can be used to convey complex ideas like sustainable architecture and environmental ethics. Through a streamlined, level-based design and clear inhabitant feedback, players gain insight into the delicate balance architects must strike in extreme environments. The rapid development cycle also showcased the team’s ability to deliver a functional and educational game under pressure.
+
+> 🔗 [GitHub Repository](https://github.com/nizarsaidicoder/t4)
