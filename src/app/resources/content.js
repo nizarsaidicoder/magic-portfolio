@@ -154,7 +154,7 @@ const about = {
       {
         title: "PHP/Laravel",
         // optional: leave the array empty if you don't want to display images
-        description : <>Experienced in developping CRUD Apps using Laravel</>.
+        description : <>Experienced in developping CRUD Apps using Laravel</>,
         images: [],
       },
       {
