@@ -1,4 +1,5 @@
 import { InlineCode } from "@/once-ui/components";
+import { title } from "process";
 
 const person = {
   firstName: "Nizar",
@@ -37,9 +38,9 @@ const social = [
     link: "https://www.linkedin.com/in/nizar-saidi-5a6b71302/",
   },
   {
-    name: "Email",
+    name: "nizar.saidi.coder@gmail.com",
     icon: "email",
-    link: "nizar.saidi.coder@gmail.com",
+    link: "mailto:nizar.saidi.coder@gmail.com",
   },
 ];
 
@@ -50,7 +51,7 @@ const home = {
   headline: <>Computer science student</>,
   subline: (
     <>
-      I'm a developer and designer studying{" "}
+      I'm a full stack developer and a designer studying{" "}
       <InlineCode>Computer Science</InlineCode> at the University of Strasbourg.
       I craft intuitive
       <br /> user experiences and powerful software.
@@ -78,12 +79,12 @@ const about = {
     title: "Introduction",
     description: (
       <>
-        I'm a developer and designer studying computer science at the University
-        of Strasbourg. Passionate about crafting impactful digital experiences,
-        I specialize in blending creativity with cutting-edge technology to
-        create sleek websites and intuitive interfaces. Outside of my studies,
-        I'm dedicated to honing my craft through independent coding projects and
-        design explorations.
+        I'm a full stack developer and designer currently studying computer
+        science at the University of Strasbourg. Passionate about building
+        meaningful digital experiences, I specialize in merging creativity with
+        modern technology to design sleek websites and intuitive user
+        interfaces. Beyond my academic pursuits, I continuously sharpen my
+        skills through personal coding projects and design explorations.
       </>
     ),
   },
@@ -97,8 +98,10 @@ const about = {
         role: "Intern",
         achievements: [
           <>
-            Developed and maintained an internal ERP functionalities
-            in .NET Platform
+            Developed and maintained key functionalities of an internal ERP
+            system using the .NET platform, focusing on optimizing business
+            workflows, ensuring system reliability, and implementing new
+            features to support day-to-day operations.
           </>,
         ],
         images: [
@@ -115,8 +118,7 @@ const about = {
         name: "University of Strasbourg",
         description: (
           <>
-            <InlineCode>-- 2023 - 2026 --</InlineCode> Bachelor of Computer
-            Science
+            <strong>2023 - 2026</strong> Bachelor of Computer Science
           </>
         ),
       },
@@ -138,28 +140,50 @@ const about = {
         // optional: leave the array empty if you don't want to display images
         images: [],
       },
-       {
+      {
+        title: "Vue.js/Nuxt.js",
+        description: (
+          <>Building next gen apps with Vue.js/Nuxt.js. MY FAVORITE</>
+        ),
+      },
+      {
         title: "Prisma/PostreSQL",
-        description: <>Clean database integration with the powerful Duo Prisma and PostgreSQL</>,
+        description: (
+          <>
+            Clean database integration with the powerful Duo Prisma and
+            PostgreSQL
+          </>
+        ),
         // optional: leave the array empty if you don't want to display images
         images: [],
       },
-          
+
       {
         title: "Nest/Express API Developpement",
-        description: <>Developping error free APIs using up-to-date technologies Nest, Express, ASP, SpringBoot...</>,
+        description: (
+          <>
+            Developping error free APIs using up-to-date technologies Nest,
+            Express, ASP, SpringBoot...
+          </>
+        ),
         // optional: leave the array empty if you don't want to display images
         images: [],
       },
       {
         title: "PHP/Laravel",
         // optional: leave the array empty if you don't want to display images
-        description : <>Experienced in developping CRUD Apps using Laravel</>,
+        description: <>Experienced in developping CRUD Apps using Laravel</>,
         images: [],
       },
       {
-        title: ".NET / Java",
+        title: ".NET",
         // optional: leave the array empty if you don't want to display images
+        description: (
+          <>
+            Experienced in building and maintaining internal ERP systems using
+            the .NET platform.
+          </>
+        ),
         images: [],
       },
     ],
