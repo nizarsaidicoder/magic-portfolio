@@ -1,0 +1,55 @@
+---
+title: "Orpheus – Guitar Theory Companion"
+publishedAt: "2026-05-12"
+summary: "A monorepo music theory platform built for intermediate guitarists. Pure TypeScript engine, guitar fretboard library, and a React Router v7 app with interactive SVG fretboards, chord voicing lookup, scale maps, and the circle of fifths."
+images:
+  - "/images/projects/orpheus/cover.png"
+
+link: "https://github.com/nizarsaidicoder/orpheus"
+---
+
+## Overview
+
+**Orpheus** is a full-stack music theory toolkit designed to help guitarists understand the theory behind what they play. It is structured as a monorepo with three packages: a pure logic engine, a guitar-specific fretboard library, and a web app that ties them together with an interactive UI.
+
+The architecture was built with strict separation of concerns — the engine has zero DOM or audio dependencies, the fretboard package builds on it purely, and the app layer consumes both without leaking theory logic into components.
+
+## Key Features
+
+- **Chord Explorer**: Root + quality picker with 6 best voicings rendered as chord diagrams. Voicings sourced from a curated database of ~4900 shapes, scored ergonomically and tagged with CAGED shape detection.
+- **Scale Map**: Full-neck SVG fretboard with color-coded degrees, sliding fret window, and CAGED position tabs for any scale pattern.
+- **Chord & Scale Identifier**: Interactive fretboard — click fret positions to toggle them, get live chord and scale identification as notes are added.
+- **Progression Builder**: Harmonize any key, build chord sequences by degree, analyze functional roles (tonic / predominant / dominant), and sequence playback via Tone.js.
+- **Arpeggio Patterns**: Chord-tone positions on the neck, CAGED box views, and animated sweep paths for triads and seventh chords.
+- **Circle of Fifths**: Interactive SVG — click any wedge to modulate the entire app to that key, with relative minor/major highlighting and key signature labels.
+
+## Technologies Used
+
+- **TypeScript (strict)**: All three packages, end to end.
+- **@orpheus/engine**: Pure music theory — pitches, intervals, chords (35+ quality kinds), scales, harmonization, functional analysis, Roman numeral analysis, circle of fifths, multiple notation styles (`chordToString`, `scaleDegreeName`).
+- **@orpheus/fretboard**: Fretboard positions, CAGED system, scale maps, shape finder with combinatorial generation + curated DB lookup, fingering analyzer, ergonomic scorer.
+- **React Router v7 (framework mode)**: SSR-capable, loaders per route, URL-state architecture for full shareability.
+- **Tailwind CSS v4 + shadcn/ui**: Studio Dark design system, `@theme {}` CSS custom properties, New York style components.
+- **Zustand v5**: Transient UI state with `persist` middleware for label format preference.
+- **Tone.js + Salamander samples**: Acoustic guitar playback — strummed chords, sequenced progressions, lazy-init for autoplay policy.
+- **SVG (no canvas)**: All fretboard, chord diagram, and circle of fifths rendering is pure declarative SVG, props-driven with no internal state.
+
+## Architecture Highlights
+
+The monorepo is split into three clear layers:
+
+1. **`@orpheus/engine`** — zero dependencies, pure functions and value objects. Handles all music theory math: pitch spelling, interval arithmetic, chord construction, scale degree naming, enharmonic respelling, Roman numeral analysis.
+2. **`@orpheus/fretboard`** — depends only on engine. Models guitar strings, fret positions, CAGED shapes, scale position windows, and chord voicing search. The shape finder uses a two-path strategy: DB lookup first (curated shapes, validated against actual tuning), combinatorial generation second (opt-in via `combinatorial: true`).
+3. **`@orpheus/app`** — consumes both. All shareable state lives in URL search params. Zustand holds only ephemeral UI flags. Engine singletons are module-level cached to avoid re-instantiation across renders.
+
+## Challenges and Learnings
+
+Designing a type-safe music theory engine in TypeScript required careful decisions around branded numeric types (`PitchClass`, `MidiNumber`), discriminated unions for chord quality (35+ variants in one union), and exact optional property types throughout. Enharmonic spelling — knowing when to write G# vs Ab in context — required diatonic interval arithmetic rather than simple semitone arithmetic.
+
+The fretboard chord voicing problem is combinatorially expensive: a 6-string guitar with 13 frets has ~7 candidates per string, giving ~100k combinations before filtering. The solution was to prioritize a curated database of 4919 voicing templates, validated against the current tuning's actual pitches, with combinatorial generation as a supplementary opt-in.
+
+SVG rendering for an interactive fretboard that handles open strings, barre chords, muted strings, position markers, and live highlighting — all as a single pure function of props — required careful coordinate math and a clean `FretHighlight` bridge type that precomputes all label formats before components render.
+
+## Current Status
+
+Core packages are complete and typechecking cleanly. All six app routes are implemented and functional. Audio playback is wired. Performance and architecture improvements are actively in progress.
