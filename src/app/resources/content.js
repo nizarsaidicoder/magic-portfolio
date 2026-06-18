@@ -93,20 +93,61 @@ const about = {
     title: "Work Experience",
     experiences: [
       {
-        company: "Jung Logistique",
-        timeframe: "2025 - Present",
-        role: "Intern",
+        company: "Altazion Services",
+        timeframe: "Jul 2025 - Present",
+        role: "Work-Study Developer",
         achievements: [
           <>
-            Developed and maintained key functionalities of an internal ERP
-            system using the .NET platform, focusing on optimizing business
-            workflows, ensuring system reliability, and implementing new
-            features to support day-to-day operations.
+            <strong>E-commerce Development:</strong> Designed and implemented an e-commerce solution for the brand King Jouet using Nuxt.js for the front-end and .NET for the back-end.
           </>,
+          <>
+            <strong>SEO Optimization:</strong> Implemented SEO best practices to increase the platform's visibility.
+          </>,
+          <>
+            <strong>Data Management:</strong> Modeled and manipulated relational databases using Entity Framework Core.
+          </>,
+          <>
+            <strong>Automation:</strong> Developed and managed scheduled tasks for data processing and synchronization.
+          </>,
+          <>
+            <strong>Deployment:</strong> Deployed CI/CD pipelines with Microsoft Azure to automate the build, test, and deployment process.
+          </>
         ],
-        images: [
-          // optional: leave the array empty if you don't want to display images
+        images: [],
+      },
+      {
+        company: "Jung Logistique",
+        timeframe: "Apr 2025 - Jun 2025",
+        role: "IT Intern",
+        achievements: [
+          <>
+            <strong>ERP Evolution:</strong> Developed and maintained features for the CRM module to optimize customer relationship management.
+          </>,
+          <>
+            <strong>Data Tools Design:</strong> Created an application for generating complex SQL queries via a visual interface of schemas connecting database tables.
+          </>,
+          <>
+            <strong>Automation:</strong> Implemented scheduled tasks executing high-load database queries for processing large volumes of data.
+          </>
         ],
+        images: [],
+      },
+      {
+        company: "Upwork",
+        timeframe: "Jun 2024 - Mar 2025",
+        role: "Freelance Full Stack Web Developer",
+        achievements: [
+          <>
+            <strong>API Development:</strong> Designed and deployed high-performance and secure REST API architectures for data transfer.
+          </>,
+          <>
+            <strong>Web Applications:</strong> Created complete web applications, from responsive user interfaces to server-side logic.
+          </>,
+          <>
+            <strong>Data Management:</strong> Modeled, optimized, and administered relational and non-relational databases.
+          </>
+        ],
+        images: [],
       },
     ],
   },
