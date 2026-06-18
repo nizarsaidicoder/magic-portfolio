@@ -33,7 +33,8 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
   return (
     <Column
       fillWidth
-      gap="m">
+      gap="m"
+    >
       <Carousel
         sizes="(max-width: 960px) 100vw, 960px"
         images={images.map((image) => ({
@@ -47,13 +48,15 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
         paddingX="s"
         paddingTop="12"
         paddingBottom="24"
-        gap="l">
+        gap="l"
+      >
         {title && (
           <Flex flex={5}>
             <Heading
               as="h2"
               wrap="balance"
-              variant="heading-strong-xl">
+              variant="heading-strong-xl"
+            >
               {title}
             </Heading>
           </Flex>
@@ -61,7 +64,8 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
         {(avatars?.length > 0 || description?.trim() || content?.trim()) && (
           <Column
             flex={7}
-            gap="16">
+            gap="16"
+          >
             {avatars?.length > 0 && (
               <AvatarGroup
                 avatars={avatars}
@@ -73,26 +77,48 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
               <Text
                 wrap="balance"
                 variant="body-default-s"
-                onBackground="neutral-weak">
+                onBackground="neutral-weak"
+              >
                 {description}
               </Text>
             )}
             <Flex
               gap="24"
-              wrap>
+              wrap
+            >
               {content?.trim() && (
                 <SmartLink
                   suffixIcon="arrowRight"
                   style={{ margin: "0", width: "fit-content" }}
-                  href={href}>
-                  <Text variant="body-default-s">Read More</Text>
+                  href={href}
+                >
+                  <Text variant="body-default-s">
+                    Read More
+                    <span
+                      style={{
+                        position: "absolute",
+                        width: "1px",
+                        height: "1px",
+                        padding: 0,
+                        margin: "-1px",
+                        overflow: "hidden",
+                        clip: "rect(0, 0, 0, 0)",
+                        whiteSpace: "nowrap",
+                        borderWidth: 0,
+                      }}
+                    >
+                      about {title}
+                    </span>
+                  </Text>
                 </SmartLink>
               )}
               {link && (
                 <SmartLink
                   suffixIcon="arrowUpRightFromSquare"
                   style={{ margin: "0", width: "fit-content" }}
-                  href={link}>
+                  href={link}
+                  aria-label={`View project ${title}`}
+                >
                   <Text variant="body-default-s">View project</Text>
                 </SmartLink>
               )}

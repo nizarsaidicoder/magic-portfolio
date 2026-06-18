@@ -20,10 +20,15 @@ export async function generateMetadata() {
     openGraph: {
       title: `${person.firstName}'s Portfolio`,
       description: "Portfolio website showcasing my work.",
-      url: baseURL,
+      url: `https://${baseURL}`,
       siteName: `${person.firstName}'s Portfolio`,
       locale: "en_US",
       type: "website",
+      images: [
+        {
+          url: `https://${baseURL}/og?title=${encodeURIComponent(home.title)}`,
+        },
+      ],
     },
     robots: {
       index: true,

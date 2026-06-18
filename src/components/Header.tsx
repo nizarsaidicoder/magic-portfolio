@@ -107,6 +107,7 @@ export const Header = () => {
                   prefixIcon="home"
                   href="/"
                   selected={pathname === "/"}
+                  aria-label="Home"
                 />
               )}
               <Line
@@ -127,6 +128,7 @@ export const Header = () => {
                     prefixIcon="person"
                     href="/about"
                     selected={pathname === "/about"}
+                    aria-label={about.label}
                   />
                 </>
               )}
@@ -144,6 +146,7 @@ export const Header = () => {
                     prefixIcon="grid"
                     href="/work"
                     selected={pathname.startsWith("/work")}
+                    aria-label={work.label}
                   />
                 </>
               )}
@@ -161,6 +164,7 @@ export const Header = () => {
                     prefixIcon="book"
                     href="/blog"
                     selected={pathname.startsWith("/blog")}
+                    aria-label={blog.label}
                   />
                 </>
               )}
@@ -178,6 +182,7 @@ export const Header = () => {
                     prefixIcon="gallery"
                     href="/gallery"
                     selected={pathname.startsWith("/gallery")}
+                    aria-label={gallery.label}
                   />
                 </>
               )}
